@@ -13,14 +13,14 @@ public class SmokeTest extends TestNGAnnotationsTest {
 		login.loginToApp(Configuration.LoginUserNmae(), Configuration.LoginPassword());
 	}
 	
-	@Test(testName = "login_Negative", description = "login_Negative", timeOut = 190000, enabled = false, groups = {
-			 "2", "sanity"}, priority=2)
+	@Test(testName = "login_Negative", description = "login_Negative", timeOut = 190000, enabled = true, groups = {
+			 "2", "sanity"}, priority=11)
 	public void login_Negative(){
 		
 		home.logout();
 		login.loginToApp("aaa", "aaa");
 		login.invalidErrorMessage();
-		login.loginToApp(Configuration.LoginUserNmae(), Configuration.LoginPassword());
+
 	}
 
 	
@@ -29,10 +29,10 @@ public class SmokeTest extends TestNGAnnotationsTest {
 	public void search_Product() throws InterruptedException {
 		
 		home.searchProduct(read.readData("Product1"));
-		wait3sec();
+		wait5sec();
 		home.clickAddToCart();
 
-		wait3sec();
+		wait5sec();
 		home.CloseProductWindow();
 	}
 	
@@ -47,7 +47,7 @@ public class SmokeTest extends TestNGAnnotationsTest {
 			"5", "sanity"}, priority=5)
 	public void DeleteItem(){
 		shoppingCart.delteItem();
-		wait3sec();
+		wait5sec();
 	}
 
 	@Test(testName = "search Product", description = "search Product", timeOut = 190000, enabled = true, groups = {
@@ -55,10 +55,10 @@ public class SmokeTest extends TestNGAnnotationsTest {
 	public void search_Product2() throws InterruptedException {
 
 		home.searchProduct(read.readData("Product2"));
-		wait3sec();
+		wait5sec();
 		home.clickAddToCart();
 
-		wait3sec();
+		wait5sec();
 		home.CloseProductWindow();
 	}
 	
@@ -67,9 +67,9 @@ public class SmokeTest extends TestNGAnnotationsTest {
 	public void ShoppingCart_Address() throws InterruptedException {
 		search_Product();
 		shoppingCart.clickNextButton();
-		wait3sec();
+		wait5sec();
 		shoppingCart.nextAddress();
-		wait3sec();
+		wait5sec();
 	}
 	
 	@Test(testName = "Shopping Cart - Carrier", description = "Shopping Cart - Carrier", timeOut = 190000, enabled = true, groups = {
@@ -77,7 +77,7 @@ public class SmokeTest extends TestNGAnnotationsTest {
 	public void ShoppingCart_Carrier(){
 		shoppingCart.Shipping();
 		shoppingCart.nextCarrier();
-		wait3sec();
+		wait5sec();
 
 		shoppingCart.Shipping();
 	}
@@ -86,9 +86,9 @@ public class SmokeTest extends TestNGAnnotationsTest {
 			"8", "sanity"}, priority=9)
 	public void ShoppingCart_Payment(){
 		shoppingCart.clickPaybycheck();
-		wait3sec();
+		wait5sec();
 		shoppingCart.clickSubmit();
-		wait3sec();
+		wait5sec();
 		home.logout();
 	}
 
@@ -96,9 +96,9 @@ public class SmokeTest extends TestNGAnnotationsTest {
 			"8", "sanity"}, priority=10)
 	public void Registration(){
 		home.loginLink();
-		wait3sec();
+		wait5sec();
 //		register.SignUp(read.readData("RegisterEmail"));
-		register.SignUp("1298799@xyz.com");
+		register.SignUp("129001@xyz.com");
 		register.FillRegistrationForm();
 
 
@@ -106,11 +106,12 @@ public class SmokeTest extends TestNGAnnotationsTest {
 
 
 	
-	public void wait3sec(){
+	public void wait5sec(){
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
+
 }

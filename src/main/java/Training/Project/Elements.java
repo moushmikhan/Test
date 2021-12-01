@@ -9,7 +9,7 @@ public class Elements {
 	public static final String Logout = "logout";
 	public static final String Search_Btn = "submit_search";
 	public static final String Image_Logo = "//a[@class='sf-with-ul']";
-	public static final String InvalidEmailAddress = "//div[div[@class='error']]//li";
+	public static final String InvalidEmailAddress = "//div[div[@class='alert alert-danger']]//li";
 	public static final String SearchBox = "search_query_top";
 	public static final String ResultsDisplayed = "//span[contains(text(),'results have been found')]";
 	public static final String CreateEmail = "//label[@for='email_create']//following-sibling::input";
@@ -24,12 +24,6 @@ public class Elements {
 	public static final String State = "//select[@id='id_state']";
 	public static final String RegisterBtn = "//button[@id='submitAccount']";
 	public static final String AccountRegistered = "//h1[contains(text(),'My account')]";
-//	public static final String IpodShuffle_amound = "//span[text()='$66.05']";
-//	public static final String AddtoCart = "//h3//a[@title='iPod touch']/../../..//div//a[text()='Add to cart']";
-//	public static final String CartDetails = "//a[contains(text(),'Cart:')]";
-//	public static final String ShoppingCartSummary = "//div[@id='center_column']//h1";
-//	public static final String productDescription = "//td//p[@class='s_title_block']//a";
-//	public static final String SummaryAmount = "//td[@class='cart_unit']//span";
 	public static final String DeleteBtn = "//a[text()='Delete']";
 	public static final String ContinueShopping = "//a[@title='Continue shopping']";
 	public static final String NextBtn = "//a[@title='Next']";
@@ -51,7 +45,6 @@ public class Elements {
 	public static final String SuccessMessage="//div[contains(@class,'confirmation')]";
 	public static final String ShoppingCart = "//a[@title='View my shopping cart']";
 	public static final String ItemDescription = "//tr[contains(@id,'product')]//p//a[contains(text(),'Printed Summer Dress')]";
-	public static final String iPodShuffle = "//img[@title='Printed Dress']";
 	public static final String ShuffleAddToCart = "(//a[@title='Add to cart'])[1]";
 	public static final String FirstOption = "(//div[@class='product-container'])[1]";
 	public static final String CloseProductWindow = "//span[@title='Close window']";

@@ -94,15 +94,7 @@ public class HomePage {
 		Thread.sleep(5000);
 	}
 	
-//	public void validateResults(){
-//		Assert.assertTrue(ResultsDisplayed.isDisplayed());
-//		Assert.assertTrue(IpodShuffle.isDisplayed());
-//	}
-//
-//	public void ProductAvailable(){
-//		Assert.assertTrue(IpodShuffle.isDisplayed());
-//
-//	}
+
 	
 	public void navigateToHome(){
 		
