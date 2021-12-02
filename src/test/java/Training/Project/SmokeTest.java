@@ -98,7 +98,7 @@ public class SmokeTest extends TestNGAnnotationsTest {
 		home.loginLink();
 		wait5sec();
 //		register.SignUp(read.readData("RegisterEmail"));
-		register.SignUp("129001@xyz.com");
+		register.SignUp("1kytt01@xyz.com");
 		register.FillRegistrationForm();
 
 
